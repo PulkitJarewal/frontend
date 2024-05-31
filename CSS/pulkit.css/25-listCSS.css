@@ -1,0 +1,7 @@
+li {
+    list-style: circle;
+    background-color: aquamarine;
+    list-style-position: inside;
+
+    list-style-image: url("https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExc213Mm83bWo2bWFhNmNjaWZqc3JwZTU3OHgzMmUxMDh2eDN4bDBveSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/eQknsP4Xv9DGBcZgQP/giphy.gif");
+}

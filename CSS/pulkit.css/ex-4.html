@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    :root{
+        --c1:rgb(171, 171, 171);
+        --c2:rgba(88, 20, 20, 0.959);
+        --c3:rgb(180, 104, 104);
+    }
+    li{
+        list-style: none;
+        margin: 10px;
+        padding-right: 20px;
+        font-size: 15px;
+        font-family: sans-serif;
+        color: aliceblue;      
+    }
+    li:hover{
+        color:var(--c1);
+        font-size: 17px;        
+    }
+
+    ul{
+        display: flex;
+        justify-content: right;
+        background-color: var(--c2);
+    }
+    body{
+        background-color: var(--c3);
+    }
+</style>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Product</li>
+            <li>More</li>
+            <li>Contact Us</li>
+        </ul>
+    </nav>
+</body>
+</html>

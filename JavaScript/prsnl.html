@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <title>clone</title>
+
+    <style>
+        
+        .heading{
+            font-family: 'Roboto';
+    font-size: xx-large;
+    margin: -97px auto;
+    padding: 10%;
+    width: 489px;
+        }
+        
+        .this_class{         
+            height: 100px; 
+            width: 100%;          
+            display: flex;
+            justify-content: center;
+            margin: 10px;
+            }
+
+        .search input{
+           
+            width: 380px;
+            height: 28px;
+            border: 1px solid grey;
+            border-radius: 3px;
+            background-color: rgb(253, 242, 232);
+            }
+
+        .button{
+            width: 70px;
+            height: 28px;
+            
+            -webkit-transition: width 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out;
+        }
+        
+        .search{
+            width: 380px;
+            height: 28px;
+            margin-top: 55px;
+            padding: 3px;
+        }
+        button:hover{
+            background-color: rgb(62, 124, 185);
+        }
+        
+        .submit{
+            width: 80px;
+            height: 28px;
+            margin-top: 58px;
+            background-color: rgb(140, 191, 243);
+            border: none;
+            border-radius: 3px;
+            padding: 3px;
+            cursor: pointer;
+            
+            }
+        
+        
+
+    </style>
+</head>
+<body style="background: rgb(253, 242, 232)";>
+    <!-- <li><input type="checkbox" >has abstract</li>
+        <li><input type="checkbox" >has title</li>
+        <li><input type="checkbox" >Has Description</li>
+        <li><input type="checkbox" >Has Full Text</li>
+        <li><input type="checkbox" >Has Disclaimer </li>
+        <li><input type="checkbox" >Has Granted Patent </li>
+        <li><input type="checkbox" >Has Grant Event </li>
+        <li><input type="checkbox" >Has National Phase </li>
+        <li><input type="checkbox" >Has Legal Events</li> 
+        <li><input type="checkbox" >Has DOCDB</li>
+        <li><input type="checkbox" >Has Applicant</li>
+        <li><input type="checkbox" >Has Owner</li>
+        <li><input type="checkbox" >Has Inventor</li>
+        <li><input type="checkbox" >Has Agent</li>
+        <li><input type="checkbox" >Has Examiner</li>
+        <li><input type="checkbox" >Has Sequence Listing</li>
+        <li><input type="checkbox" >Cited By Patent</li>
+        <li><input type="checkbox" >Cites NPL</li>
+        <li><input type="checkbox" >Cites Patent</li>
+        <li><input type="checkbox" >Cites Resolved NPL</li> -->
+    <h3 class="heading">Ingenious Generative AI Patent Tool</h3>
+    <!-- <img src="images\logo-L9garMKGA-transformed.png" alt="Company LOGO"> -->
+    <div class="this_class">
+        <div class = "search">
+            <input type="search">
+
+        </div>
+       
+            <Button class="submit">search</Button>
+    
+    </div>
+    <script>
+        
+    </script>
+</body>
+</html>          
+let per_page_results = 50;
+    let current_page = 1;
+
+    const pages = [];
+for(let i = 0; i<= Math.ceil(data.total/ per_page_results); i++){
+    pages.push(i)
+}
+
+const indexOfLastPage = current_page*per_page_results;
+const indexOfFirstPage = indexOfLastPage - per_page_results;
+const current_item = (data.total).slice(indexOfFirstPage,indexOfLastPage);
+
+const prevBtn = () =>{
+    if((current_page - 1) * per_page_results){
+        current_page--;
+    }
+}

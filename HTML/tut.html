@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tut8-Input and forms</title>
+</head>
+<body>
+<h1>Rajani Kant Singing Audition</h1>
+    <form action="backend.php">
+
+        <label for="My Name" >Name : </label>
+        <div>
+       <input type="text" name = "My Name" id = "My Name">
+        </div>
+        <br>
+        <div>
+        Mobile Number : <input type="number" name = "My Number">
+        </div>
+        <br>
+        <div>
+        E-mail        : <input type="text" name = "My Mail">
+        </div>
+        <br>
+        <div>
+        DOB           : <input type="date" name = "My DOB">
+        </div>
+        <br>
+        <div>
+        Are You 18+ : <input type="checkbox" name = "My Age">
+        </div>
+        <br>
+        <div>
+        Male: <input type="radio" name = "My gender"> Female: <input type="radio" name = "My gender"> <!-- if name is same then it will check only one of them -->
+        </div>
+        <br>
+        <div>
+            Write about yourself: <br><textarea name="Mytext" cols="30" rows="10"></textarea>
+        </div>
+        <br>
+        <div>
+        Page No. <select name = "page">
+            <option value ="1">1</option>
+            <option value ="2">2</option>
+            <option value ="3">3</option>
+            <option value ="4">4</option>
+            <option value ="5">5</option>
+            </select>
+            </div>
+            <br>
+        <input type="submit" value = "Submit"> <input type="reset" value = "Reset">
+        </div>
+        
+    </form>
+
+    
+    
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        height: 500px;
+        width: auto;
+        display: flex;
+        margin: 10px;
+        padding: 10px;
+        border: 2px solid brown;
+
+
+        /* Properties of box */
+
+        /* flex-direction: row;  default */
+        /* flex-direction: column;  upar se neeche seedha order*/
+        /* flex-direction: row-reverse; left to right seedha order */
+        /* flex-direction: column-reverse;  neeche se upar seedha order */
+
+
+
+        /* flex-wrap: nowrap; default */
+
+        /* flex-wrap: wrap;  */
+        /* box container ke andar hi rahenge */
+
+        /* flex-wrap: wrap-reverse;  */
+        /* neeche hojayegi position */
+
+
+
+        /* mixture of above two */
+        /* flex-flow: column wrap; */
+
+        
+        /* horizontal allignment */
+        /* justify-content: center; */
+        /* box beechh mein */
+
+        /* justify-content: flex-end; */
+        /* box at right */
+
+        /* justify-content: flex-start; */
+        /* box at left or default */
+
+        /* justify-content: space-between; */
+        /* boxes have space in between but not at start and  at end */
+
+        /* justify-content: space-evenly; */
+        /* boxes have space in between and at start and  at end */
+
+        /* justify-content: space-around; */
+        /* boxes have space in between and at start and  at end */
+
+
+
+        /* vertical allignment */
+        /* align-items: flex-start; */
+        /* items are at top by default */
+
+        /* align-items: flex-end; */
+        /* items are at bottom */
+
+        /* align-items: center; */
+        /* items are at center */
+
+        /* align-items: stretch; */
+        /* items take as much as container is taking */
+    }
+
+    .box{
+        height: 200px;
+        width: 200px;
+        background-color: blueviolet;
+        margin: 10px;      
+    }
+    #box1{
+        /* order:3; order jiska bada voh last mein usse chota uske peeche*/
+        order: 3;
+    }
+    #box2{
+        /* flex-grow: 4; ye jiska zada voh sabse zada stretch krega */flex-grow: 3;
+        /* flex-shrink: 4;ye jiska zada voh sabse zada stretch krega */flex-shrink: 3;
+
+        /* flex-basis: 300px; if flex dirn is in row toh horizontal stretch otherwise vertical */flex-basis: 300px;
+
+        /* above three prop or */ flex: 3 3 300px;
+    }
+    #box3{
+        align-self: center;
+        align-self: flex-start;
+        align-self: flex-end;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <div class="box" id="box1">box1</div>
+        <div class="box" id="box2">box2</div>
+        <div class="box" id="box3">box3</div>
+        <!-- <div class="box" id="box4">box4</div>
+        <div class="box" id="box5">box5</div>
+        <div class="box" id="box6">box6</div> -->
+    </div>
+</body>
+</html>

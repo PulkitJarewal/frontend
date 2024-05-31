@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link
+href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+rel="stylesheet"
+/>
+<title>Patent Search</title>
+
+<style>
+.this_class {
+height: 100px;
+width: 100%;
+display: flex;
+justify-content: center;
+}
+
+.search {
+display: flex;
+align-items: center;
+}
+
+.search input {
+width: 380px;
+height: 28px;
+border: 1px solid grey;
+border-radius: 3px;
+background-color: rgb(236, 239, 237);;
+}
+
+.submit {
+width: 80px;
+height: 28px;
+margin-left: 10px; /* Add some spacing between input and button */
+background-color: rgb(140, 191, 243);
+border: none;
+border-radius: 3px;
+padding: 3px;
+}
+
+table {
+border-collapse: collapse;
+}
+
+th,
+td {
+border: 1px solid black;
+}
+tr:hover{
+    background-color: rgb(140, 191, 243);
+}
+</style>
+</head>
+<body style="background:rgb(236, 239, 237);; font-family: 'Roboto'">
+<h3 class="this_class" style="font-size: xx-large">
+Ingenious Generative AI Patent Tool
+</h3>
+<div class="this_class">
+<div class="search">
+<input type="search" id="searchInput" />
+<button class="submit" id="searchButton">Search</button>
+</div>
+</div>
+<h2 id="totalValue"></h2>
+<ul id="results"></ul>
+<table id="resultsT" hidden>
+<thead>
+<tr>
+
+<th>Patent Number</th>
+<th>Publishing Date</th>
+
+<th>Invention Title</th>
+</tr>
+</thead>
+<tbody id="resultsBody"></tbody>
+</table>
+
+
+
+
+
+
+<script>
+
+    
+
+
+document.addEventListener("DOMContentLoaded", () => {
+const searchInput = document.getElementById("searchInput");
+const searchButton = document.getElementById("searchButton");
+const resultsList = document.getElementById("resultsBody");
+
+searchButton.addEventListener("click", async () => {
+const query = searchInput.value.trim();
+if (query === "") {
+return;
+}
+
+const apiUrl =
+`https://api.lens.org/patent/search?token=3uMc3DMluk3c0x0GFkK9BlafEYlzSRrWGZxAvDc4WSkF0bmzuDlZ&query=` +
+query;
+try {
+const response = await fetch(apiUrl);
+if (!response.ok) {
+throw new Error(
+`API request failed with status ${response.status}`
+);
+}
+const data = await response.json();
+console.log(data);
+
+
+document.getElementById("totalValue").textContent =
+"Total:" + data.total;
+
+
+
+resultsList.innerHTML = "";
+document.getElementById("resultsT").style.display = "block";
+for (const patent of data.data) {
+const row = document.createElement("tr");
+row.innerHTML = `
+
+<td>${patent.jurisdiction + patent.doc_number}</td>
+<td>${patent.date_published}</td>
+<td>${patent.biblio.invention_title[0].text}</td>
+`;
+resultsBody.appendChild(row);
+}
+
+
+
+} catch (error) {
+console.error("Error:", error);
+resultsList.innerHTML = "<li>Error fetching data from API.</li>";
+}
+});
+});
+</script>
+</body>
+</html>

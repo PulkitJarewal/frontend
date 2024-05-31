@@ -1,0 +1,26 @@
+h2{
+    text-align: center;
+}
+
+p{
+    padding: 15px;
+    margin: 10px;    
+}
+
+body div:first-child p:first-child{
+    background-color: yellow;
+    color: red;
+}
+body div p:first-child{
+    background-color: yellow;
+    color: black;
+}
+
+p{
+    background-color: blue;
+    color: white;
+}
+
+
+
+

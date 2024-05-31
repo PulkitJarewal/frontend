@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    :root{
+        --color: blue;
+        --seccolor : red;
+        --defpad : 23px;
+        --defop : 0.3;
+    }
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    ul{
+        display: flex;
+        background-color: var(--color);
+    }
+
+    li{
+        list-style: none;
+        padding: 13px;
+    }
+
+    div{
+        --color:green;
+        background-color: var(--color);
+        padding: var(--defpad);
+        opacity: var(--defop);
+    }
+
+</style>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Product</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+
+    <div>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore cumque perspiciatis laboriosam sed alias neque aut labore libero ullam incidunt aspernatur, rerum odit explicabo voluptas voluptate totam qui corporis error et? Corporis minus incidunt doloribus quasi necessitatibus voluptas cum mollitia! Rem, est consequuntur exercitationem fugit itaque in temporibus ullam libero.
+    </div>
+</body>
+</html>

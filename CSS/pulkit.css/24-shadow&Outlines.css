@@ -1,0 +1,18 @@
+
+.a, .b, .c{
+    margin: 15px;
+    padding: 20px;
+    border: 2px solid rgb(55, 55, 149);
+}
+
+.a{
+    box-shadow: 15px 9px 17px rgb(55, 55, 149);
+}
+
+.b{
+    text-shadow: 15px 20px 10px rgb(55, 55, 149);
+}
+
+.c{
+    outline: 2px solid black;
+}

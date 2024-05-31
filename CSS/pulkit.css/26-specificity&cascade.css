@@ -1,0 +1,16 @@
+/*position*/
+
+.red{color: red;}
+.green{color: green;}
+.blue{color: blue;}
+
+/*specificity*/
+
+#a2{color: violet;}/*100*/
+
+.b2{color: pink;}/*10*/
+[data = X]{color: brown; }/*10*/
+
+h2{
+    color: blueviolet;/*1*/
+}

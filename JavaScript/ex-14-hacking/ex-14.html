@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    p{
+        text-align: center;
+        font-size:200%;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    div{
+        padding: 100px 0px;
+    }
+
+    @keyframes blink {50% { color: transparent }}
+.loader__dot { animation: 3s blink infinite }
+.loader__dot:nth-child(2) { animation-delay: 250ms }
+.loader__dot:nth-child(3) { animation-delay: 500ms }
+</style>
+<body>
+    <div class="bo">
+    <!-- <p>Initializing Hacking<span class="loader__dot">.</span><span class="loader__dot">.</span><span class="loader__dot">.</span></p>
+    <p>Reading your files<span class="loader__dot">.</span><span class="loader__dot">.</span><span class="loader__dot">.</span></p>
+    <p>Password files Detected<span class="loader__dot">.</span><span class="loader__dot">.</span><span class="loader__dot">.</span></p>
+    <p>Sendng all passwords and personal files to server<span class="loader__dot">.</span><span class="loader__dot">.</span><span class="loader__dot">.</span></p>
+    <p>Cleaning up<span class="loader__dot">.</span><span class="loader__dot">.</span><span class="loader__dot">.</span></p> -->
+    <script src="ex-14.js"></script>
+     </div>
+</body>
+</html>

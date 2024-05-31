@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website builder</title>
+</head>
+<style>
+    *{
+        color: aliceblue;
+        font-family: Arial;
+    }
+    .cont {
+        display: flex;
+        padding: 10px;
+        margin: 10px;
+        height: 130px;
+        width: 1490;
+        
+    
+    }
+    .cont:hover{
+        background-color: rgb(9, 16, 44);
+    }
+
+    .under {
+        display: flex;
+    }
+
+    .under>*,
+    .tit,
+    .image>* {
+        padding: 5px;
+        margin: 3px;
+    }
+
+    .under>*{
+        font-size: 70%;
+        color: #777777;
+        
+    }
+
+    img {
+
+        height: 110px;
+        width: 200px;
+
+    }
+
+    .image {
+        width: 225px;
+    }
+
+    .dur,
+    img {
+        position: absolute;
+        border-radius: 10px;
+        object-fit:cover
+
+    }
+
+    .dur {
+        right: 1302px;
+    top: 108px;
+    font-weight: 700;
+    background-color: #3f3f3f;
+    border-radius: 3px;
+    font-size: small;
+    height: 13px;
+    }
+    body{
+    background-color: rgb(4, 7, 19);
+    }
+    .a{
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 1200px;
+    }
+    .fit{
+        height: 100px;
+        width: 200px;
+    }
+</style>
+
+<body class="bo">
+    <div class="cont">
+        <div class="image">
+            <div class="fit"><img src="https://marketplace.canva.com/EAFW7JwIojo/2/0/1600w/canva-red-colorful-tips-youtube-thumbnail-FxVVsqyawqY.jpg"
+            ></div>
+            <div class="dur">duration</div>
+        </div>
+        <div class="a">
+            <div class="tit">this is a loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong title</div>
+            <div class="under">
+                <div>loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo</div>
+                <div>views</div>
+                <div>uploading date</div>
+            </div>
+        </div>
+    </div>
+ <script src="ex-13.js"></script>
+</body>
+
+</html>
