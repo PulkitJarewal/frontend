@@ -1,27 +1,35 @@
+:root {
+    --background-color: black;
+    --primary-color: rgb(18, 18, 18);
+    --secondary-color: grey;
+    --highlight-color: white;
+    --button-background: rgba(176, 176, 176, 0.188);
+    --scrollbar-thumb: #88888866;
+    --scrollbar-thumb-hover: #868686c9;
+    --scrollbar-thumb-active: #d2d2d2c9;
+}
+
 body {
-    background-color: black;
+    background-color: var(--background-color);
 }
 
 * {
-    margin: 0px;
+    margin: 0;
     font-family: Helvetica, sans-serif;
-
 }
 
 ul li img {
     width: 20px;
 }
 
-.sp-logo{
+.sp-logo {
     list-style: none;
     display: flex;
     align-items: center;
     font-size: 14px;
-    font-family: Helvetica, sans-serif;
     font-weight: bold;
     gap: 20px;
     padding: 10px;
-
 }
 
 div ul {
@@ -42,36 +50,32 @@ div ul {
 
 .sp-parent {
     flex-direction: column;
-    width: 16.5vw;
+    width: 22.5vw;
     height: 100%;
     margin: 0.5rem 0 0.5rem 0.5rem;
     color: aliceblue;
-
 }
 
 .sp {
-    background-color: rgb(18, 18, 18);
+    background-color: var(--primary-color);
     border-radius: 6px;
     overflow: hidden;
-
 }
 
 .home {
     height: 20vh;
     margin-bottom: 0.5rem;
-
 }
 
-.lib,
-.lib image {
-    height:75.7vh;
-    color: gray;
+.lib {
+    height: 75.7vh;
+    color: var(--secondary-color);
 }
 
 .db {
     color: aliceblue;
     width: 82vw;
-    background-color: rgb(18, 18, 18);
+    background-color: var(--primary-color);
     margin: 0.5rem;
     height: 97vh;
     border-radius: 6px;
@@ -79,232 +83,346 @@ div ul {
 }
 
 .lib li:hover {
-    color: white;
+    color: var(--highlight-color);
 }
 
 .Scroll {
     max-height: 210px;
-    
     overflow: hidden;
     color: aliceblue;
     font-size: 16px;
     font-weight: bold;
     position: absolute;
-    width: 16vw;
+    width: 21.2vw;
 }
 
-.Scroll>span>button{
+.Scroll > span > button {
     border-radius: 20px;
     font-weight: bold;
     border: none;
     max-width: 9vw;
     padding: 9px;
-    
-    
 }
-.Scroll>div{
+
+.Scroll > div {
     padding: 10px;
 }
 
-
 .lang {
     height: 2.5vh;
-    filter: invert(100%);
+    filter: invert(1);
 }
 
 .lang-b {
     display: flex;
     justify-content: space-around;
-
     align-content: center;
     flex-wrap: wrap;
     padding: 8px;
-
-    background:transparent;
-    border: 0.2px solid grey;
+    background: transparent;
+    border: 0.2px solid var(--secondary-color);
     border-radius: 20px;
     color: aliceblue;
     width: 100px;
     height: 30px;
     line-height: 19px;
     font-weight: bold;
-    margin: 47px 0px;
+    margin: 47px 0;
     position: absolute;
     bottom: -43px;
     left: -10px;
 }
-footer {
-    position: fixed;
-    bottom: 33px;
-    height: 10vh;
-    left: 40px;}
 
-.cook{
-    color: grey;
+footer {
+    position: relative;
+    bottom: -285px;
+    height: 10vh;
+    left: 40px;
+}
+
+.cook {
+    color: var(--secondary-color);
     text-decoration: none;
-    
-    
     font-size: 14px;
 }
-.dash_up{
+
+.dash_up {
     display: flex;
     justify-content: space-between;
     padding: 21px;
-    position: relative;
-    background-color: rgb(18, 18, 18);
-    z-index: 1;
+    background-color: var(--primary-color);
+    z-index: 10;
+    position: fixed;
+    width: 1144.5px;
 }
 
-.left_arrow,.right_arrow{
+.left_arrow, .right_arrow {
     height: 17px;
-    filter: invert(100);
+    filter: invert(1);
 }
-.right_arrow_button, .left_arrow_button{
+
+.right_arrow_button, .left_arrow_button {
     height: 4vh;
     background: black;
-    border: 0px;
+    border: 0;
     border-radius: 100px;
     display: inline-flex;
-    align-items: center;   
+    align-items: center;
+}
 
+.dash_up:first-child div {
+    gap: 8px;
+    display: flex;
 }
-.dash_up:first-child div{
-gap: 8px;
-display: flex;
-}
-.signup,.login{
+
+.signup, .login {
     font-weight: 600;
     font-size: 15px;
     border-radius: 29px;
     padding: 14px 30px;
-    position: relative;
-    top: -16.5px;
-    
+    border: none;
 }
-.signup{
+
+.signup {
     background-color: transparent;
-    border: 0px;
-    color:grey;
+    color: grey;
     padding-right: 2px;
 }
-.signup:hover{
+
+.signup:hover {
     color: rgb(238, 238, 238);
     font-size: 15.7px;
     transition: 0.5s;
-
 }
-.playlist{
-    padding: 30px;
+
+.playlist {
+    padding: 30px 17px;
     height: 11vh;
-    background-color: rgba(176, 176, 176, 0.188);
-    Margin: 10px;
+    background-color: var(--button-background);
+    margin: 10px;
     border-radius: 10px;
-    width: 11.5vw;
+    width: 17.5vw;
     display: flex;
     flex-direction: column;
     row-gap: 15px;
-    /* position: initial; */
     justify-content: center;
 }
 
-.Scroll:hover , .dash_down:hover{
+.Scroll:hover {
     overflow-y: scroll;
-   /* position: absolute; */
-   z-index: 2;
-   
-  }
+    z-index: 2;
+}
 
-  /* Track */
+/* Track */
 .Scroll::-webkit-scrollbar {
-    background: transparent; 
-    
-  }
-   
-  /* Handle */
-  .Scroll::-webkit-scrollbar-thumb {
-    background: #88888866; 
-  }
+    background: transparent;
+    width: 8px;
+}
 
-  .Scroll::-webkit-scrollbar-thumb:hover {
-    background: #868686c9; 
-  }
-  .Scroll::-webkit-scrollbar-thumb:active { 
-    background-color: #d2d2d2c9;
-}  
+/* Handle */
+.Scroll::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+}
+
+.Scroll::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
+}
+
+.Scroll::-webkit-scrollbar-thumb:active{
+    background-color: var(--scrollbar-thumb-active);
+
+
+}
+
+/* Track */
+.dash_down::-webkit-scrollbar {
+    width: 8px; /* Set the width of the scrollbar */
+    background: transparent; /* Make it initially transparent */
+}
+
+/* Handle */
+.dash_down::-webkit-scrollbar-thumb {
+    background: transparent; /* Initially transparent */
+}
+
+/* Show the handle on hover */
+.dash_down:hover::-webkit-scrollbar-thumb {
+    background: #88888866; /* Visible scrollbar thumb on hover */
+}
+
+/* Handle hover */
+.dash_down:hover::-webkit-scrollbar-thumb:hover {
+    background: #868686c9; /* Darker on hover */
+}
+
+/* Handle active */
+.dash_down:hover::-webkit-scrollbar-thumb:active {
+    background-color: #d2d2d2c9; /* Darker on active */
+}
 
 .footer {
     height: 170px;
     width: 200px;
 }
 
-.links{
+.links {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     gap: 5px 20px;
-    
 }
-.cook{
+
+.cook {
     font-size: 10px;
 }
 
-.dash_down{
+.dash_down {
     height: 97vh;
-    overflow:hidden;
+    overflow-y: hidden; /* Hide scrollbar */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
     position: absolute;
-    left:17px;
-    right:0px;
-    top: 0px
-    
-    
+    left: 17px;
+    right: 0;
+    top: 0;
+    padding-right: 30px; /* Adjust this value to accommodate the scrollbar width */
+    box-sizing: content-box;
 }
 
-.dash_down_element{
-    height: 330px;
+.dash_down_element {
+    height: 65px;
     font-size: 20px;
     font-weight: bold;
 }
 
-
-.upper_space{
+.upper_space {
     position: relative;
-    top:91px;
+    top: 91px;
 }
 
-.db-footer-links-box{
+.db-footer-links-box {
     display: flex;
     gap: 150px;
 }
 
-.db-footer-links{
+.db-footer-links {
     text-decoration: none;
-      color: rgb(157, 157, 157);
-      list-style: none;
-      font-weight:600;
-      font-size: 14px;
-      list-style: none;
-      margin-bottom: 10px;
-      
+    color: rgb(157, 157, 157);
+    list-style: none;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 10px;
 }
- .db-footer-links-head{
+
+.db-footer-links-head {
     list-style: none;
     margin-bottom: 10px;
     font-weight: bold;
     font-size: 14px;
- }
+}
 
-.db-footer-links:hover{
+.db-footer-links:hover {
     color: aliceblue;
     text-decoration-line: underline;
+}
 
+.db-footer-button {
+    height: 20px;
+}
+
+.button_insta {
+    width: 35px;
+    height: 35px;
+    background-color: var(--button-background);
+    border: none;
+    border-radius: 35px;
+    margin-right: 10px;
+}
+
+.insta {
+    filter: invert(1);
+    width: 17px;
+    position: relative;
+    top: 2px;
+}
+
+.button_insta:hover {
+    background-color: rgb(103, 103, 103);
+}
+
+.dash_down_element {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 24px;
+}
+
+.dash_down_element > a {
+    font-size: 14px;
+    text-decoration: none;
+    color: grey;
+}
+
+.Popular-artist-parent, .Popular-album-parent {
+    display: flex;
+    gap: 15px;
+}
+
+.Popular-artist {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.ar-nm {
+    font-size: 14px;
+    font-weight: bold;
+    position: relative;
+    top: 6px;
+}
+
+.ar-txt {
+    font-size: 12.5px;
+    font-weight: bold;
+    position: relative;
+    top: 12px;
+    color: rgb(118, 118, 118);
+}
+
+.Popular-album {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4%;
+}
+
+.dash_down:hover {
+    overflow-y: scroll;
+}
+
+
+
+.blc-box {
+    position: relative;
+    right: -113px;
+    bottom: 75px;
     
 }
 
-.db-footer-button{
-    height: 20px;
 
+
+.green-play-button {
+    display: none; /* Hide the green play button by default */
+    width: 50px;
+    height: 50px;
+    position: relative;
+    object-fit: cover;
+    border-radius: 50px;
+    right: -90px;
+    bottom: 57px;
+    z-index: 19;
 }
-.insta{
-filter: invert(1);
-width: 10px;
+
+.Popular-artist:hover, .green-play-button {
+    display: block; /* Show the green play button when hovering over .Popular-artist */
 }
